@@ -1,6 +1,6 @@
 # 🎬 CinemaNest
 
-CinemaNest is a sleek, Netflix-style movie streaming web app built with React. It uses [TMDB API](https://www.themoviedb.org/) to fetch real-time movie data and Firebase for user authentication.
+CinemaNest is a sleek, modern-style movie streaming web app built with React. It uses [TMDB API](https://www.themoviedb.org/) to fetch real-time movie data and Firebase for user authentication.
 
 ## 🌟 Features
 
