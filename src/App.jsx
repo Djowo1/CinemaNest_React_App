@@ -19,7 +19,7 @@ if(user){
   navigate('/');
 }else{
   console.log("Logged Out")
-  navigate('/Login');
+  navigate('/login');
 }
 })
 }, [])
@@ -29,8 +29,8 @@ if(user){
       <ToastContainer theme='dark' />
       <Routes>
         <Route path='/' element={ <Home />}/>
-        <Route path='/Login' element={ <Login />}/>
-        <Route path='/Player/:id' element={ <Player />}/>
+        <Route path='/login' element={ <Login />}/>
+        <Route path='/player/:id' element={ <Player />}/>
       </Routes>
     
     </div>
