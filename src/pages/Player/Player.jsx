@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useMemo } from 'react'
 import './Player.css'
 import back_arrow_icon from '../../assets/back_arrow_icon.png'
 import { useNavigate, useParams } from 'react-router-dom'
 
 const Player = () => {
+
 
   const {id} = useParams();
   const navigate = useNavigate();
@@ -15,20 +16,20 @@ const Player = () => {
     typeof:""
   })
 
-const options = {
+const options = useMemo(() => ({
   method: 'GET',
   headers: {
     accept: 'application/json',
     Authorization: `Bearer ${import.meta.env.VITE_TMDB_API_KEY}`
   }
-};
+}), []);
 
 useEffect(() => {
   fetch(`https://api.themoviedb.org/3/movie/${id}/videos?language=en-US`, options)
   .then(response => response.json())
   .then(response => setApiData(response.results[0]))
   .catch(err => console.error(err));
-},[])
+},[id, options])
 
 
 
