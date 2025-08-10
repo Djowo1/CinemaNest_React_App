@@ -27,8 +27,7 @@ const Player = () => {
         if (!response.results || response.results.length === 0) {
           setApiData(null);
         } else {
-          // Prefer Trailer type, fallback to first YouTube video
-          const trailer = response.results.find(
+                const trailer = response.results.find(
             vid => vid.type === 'Trailer' && vid.site === 'YouTube'
           );
           const fallback = response.results.find(
